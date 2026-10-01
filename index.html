@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Александр Якунин — стилист-визажист, Санкт-Петербург</title>
+  <meta name="description" content="Стрижки, сложное окрашивание, укладки, причёски и макияж. Стилист-визажист Александр Якунин. Онлайн-запись на свободное время.">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="color-scheme" content="dark">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Александр Якунин — стилист-визажист">
+  <meta property="og:description" content="Стрижки, окрашивание, укладки и макияж. Онлайн-запись.">
+  <meta property="og:image" content="img/logo_square.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" id="favicon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23000'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Montserrat,Arial,Helvetica,sans-serif' font-weight='800' font-size='30' letter-spacing='-1' fill='%23fff'%3EYA%3C/text%3E%3C/svg%3E">
+  <link rel="alternate icon" href="img/logo_ya.jpg">
+  <link rel="apple-touch-icon" href="img/logo_ya.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=15">
+  <script>try{var c=JSON.parse(localStorage.getItem('yakunin_pub_v1'));if(c&&c.d&&c.d.settings&&c.d.settings.site&&c.d.settings.site.intro===false)document.documentElement.classList.add('no-intro')}catch(e){}</script>
+  <script type="application/ld+json" id="ldjson">{"@context":"https://schema.org","@type":"HairSalon","name":"Александр Якунин — стилист-визажист","telephone":"+79217600261","address":{"@type":"PostalAddress","addressLocality":"Санкт-Петербург","addressCountry":"RU"}}</script>
+</head>
+<body class="is-loading">
+
+<!-- Заставка -->
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro__logo"><img class="js-logo" src="img/logo.png" alt=""></div>
+  <div class="intro__meta"><span class="intro__step" id="introStep">Загружаем</span><span class="intro__num" id="introNum">0</span></div>
+  <div class="intro__bar"><i id="introBar"></i></div>
+</div>
+
+<div class="grain" aria-hidden="true"></div>
+
+<!-- Боковая панель (компьютер) -->
+<aside class="side" id="side">
+  <a class="side__logo" href="#home" data-go="home" aria-label="На главную"><img class="js-logo" src="img/logo.png" alt="Yakunin Aleksandr"></a>
+  <nav class="side__nav" id="sideNav" aria-label="Разделы"><i class="side__bar" id="sideBar"></i></nav>
+  <div class="side__bottom">
+    <div class="player" id="player" hidden>
+      <div class="player__top">
+        <span class="player__label"><span class="eq"><i></i><i></i><i></i><i></i></span>Музыка</span>
+        <button class="player__list" data-player="list" aria-label="Плейлист" title="Плейлист"><svg class="i" viewBox="0 0 24 24"><path d="M4 6h11M4 12h11M4 18h7M18 15v-9l3 1"/><circle cx="16" cy="18" r="2"/></svg></button>
+      </div>
+      <div class="player__title"><span data-player-title>—</span></div>
+      <div class="player__progress" data-player="seek"><i data-player-progress></i></div>
+      <div class="player__ctrl">
+        <button class="player__btn" data-player="prev" aria-label="Предыдущий трек"><svg class="i i-fill" viewBox="0 0 24 24"><path d="M18 5l-9 7 9 7zM5 5h2v14H5z"/></svg></button>
+        <button class="player__btn player__btn--main" data-player="toggle" aria-label="Играть / пауза"><svg class="i i-fill i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><svg class="i i-fill i-pause" viewBox="0 0 24 24"><path d="M7 5h3v14H7zM14 5h3v14h-3z"/></svg></button>
+        <button class="player__btn" data-player="next" aria-label="Следующий трек"><svg class="i i-fill" viewBox="0 0 24 24"><path d="M6 5l9 7-9 7zM17 5h2v14h-2z"/></svg></button>
+      </div>
+    </div>
+    <a class="btn btn--gold btn--block" href="#booking" data-go="booking"><span data-bind="text.heroCta">Записаться</span></a>
+    <div class="socials socials--side js-socials"></div>
+  </div>
+</aside>
+<div class="playlist" id="playlist" hidden>
+  <div class="playlist__head"><span>Плейлист</span><button data-player="list" aria-label="Закрыть"><svg class="i" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+  <ol class="playlist__list" id="playlistList"></ol>
+</div>
+
+<!-- Верхняя панель (телефон) -->
+<header class="topbar">
+  <a class="topbar__logo" href="#home" data-go="home" aria-label="На главную"><img class="js-logo" src="img/logo.png" alt="Yakunin Aleksandr"></a>
+  <span class="topbar__title" id="topTitle"></span>
+  <button class="topbar__music" data-player="toggle" aria-label="Музыка" hidden><span class="eq"><i></i><i></i><i></i><i></i></span><svg class="i i-note" viewBox="0 0 24 24"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg></button>
+</header>
+
+<div class="pager" id="pager"><button class="pager__arrow" id="pagerUp" data-go-prev aria-label="Вверх"><svg class="i" viewBox="0 0 24 24"><path d="M6 15l6-6 6 6"/></svg></button><span id="pagerNum">01</span><i><b id="pagerFill"></b></i><span id="pagerTotal">07</span><button class="pager__arrow" id="pagerDown" data-go-next aria-label="Вниз"><svg class="i" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button></div>
+
+<main class="stage" id="stage">
+  <div class="progress" aria-hidden="true"><i id="scrollProgress"></i></div>
+
+  <!-- ГЛАВНАЯ -->
+  <section class="panel panel--home" id="home" data-section="home" aria-label="Главная">
+    <div class="hero">
+      <div class="hero__media" id="heroMedia">
+        <img id="heroImg" alt="Александр Якунин" style="opacity:0">
+        <div class="hero__shade"></div>
+      </div>
+      <canvas class="dust" id="dust" aria-hidden="true"></canvas>
+      <div class="hero__content" id="heroContent">
+        <p class="eyebrow a-up"><span data-bind="title">Стилист · Визажист</span><i class="eyebrow__dot"></i><span data-bind="city">Санкт-Петербург</span></p>
+        <h1 class="hero__title"><span class="js-split" data-bind="firstName">Александр</span><span class="accent js-split" data-bind="lastName">Якунин</span></h1>
+        <p class="hero__tagline a-up" data-bind="tagline">Стрижки, окрашивание, укладки и макияж.</p>
+        <div class="hero__actions a-up">
+          <a class="btn btn--line" href="#about" data-go="about"><span data-bind="text.heroCta3">Обо мне</span></a>
+          <a class="btn btn--line" href="#works" data-go="works"><span data-bind="text.heroCta2">Портфолио</span></a>
+          <a class="btn btn--book" href="#booking" data-go="booking"><span class="book__main"><span data-bind="text.heroCta">Записаться</span></span><small class="book__slot" id="nearest" hidden>Ближайшее время: <b id="nearestValue">—</b></small></a>
+        </div>
+        <div class="hero__meta a-up">
+          <div class="stat"><b class="js-count" data-bind="years">15+</b><span data-bind="yearsLabel">лет в профессии</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- О МАСТЕРЕ -->
+  <section class="panel" id="about" data-section="about" aria-label="О мастере">
+    <div class="wrap about">
+      <div class="about__media a-up tilt">
+        <img id="aboutImg" src="https://static.tildacdn.info/tild3835-6266-4531-b438-343866393136/photo_2023-06-30_13-.jpg" alt="Александр Якунин" loading="lazy">
+        <div class="about__badge"><b class="js-count" data-bind="years">15+</b><span data-bind="yearsLabel">лет в профессии</span></div>
+      </div>
+      <div class="about__text">
+        <p class="kicker a-up"><span class="kicker__num">02</span><span data-bind="text.aboutTitle">О мастере</span></p>
+        <h2 class="h2 js-split" data-bind="fullName">Александр Якунин</h2>
+        <div class="tabs a-up" id="aboutTabs" role="tablist">
+          <button class="is-on" data-tab="bio" role="tab">О себе</button>
+          <button data-tab="facts" role="tab">Факты</button>
+          <button data-tab="awards" role="tab">Обучение и награды</button>
+        </div>
+        <div class="panes a-up">
+          <div class="pane is-on" data-pane="bio"><div class="about__lead" id="aboutText"></div></div>
+          <div class="pane" data-pane="facts"><ul class="list-lines" id="facts"></ul></div>
+          <div class="pane" data-pane="awards"><ul class="list-lines list-lines--gold" id="awards"></ul></div>
+        </div>
+        <a class="about__cta a-up" href="#works" data-go="works"><span data-bind="text.aboutCta">Смотреть работы</span><svg class="i" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ПОРТФОЛИО -->
+  <section class="panel" id="works" data-section="works" aria-label="Портфолио">
+    <div class="wrap works">
+      <aside class="works__side">
+        <header class="head">
+          <div>
+            <p class="kicker a-up"><span class="kicker__num">03</span><span>Работы</span></p>
+            <h2 class="h2 js-split" data-bind="text.worksTitle">Портфолио</h2>
+            <p class="sub a-up" data-bind="text.worksSub"></p>
+          </div>
+        <div class="gview a-up" id="gview" role="tablist" aria-label="Вид галереи">
+          <button data-view="cinema" aria-label="Слайдшоу" title="Слайдшоу"><svg class="i" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="1"/><path d="M5 20h2M9 20h2M13 20h2M17 20h2"/></svg></button>
+          <button data-view="grid" aria-label="Сетка" title="Сетка"><svg class="i" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg></button>
+        </div>
+        </header>
+        <div class="chips a-up" id="galleryFilters" role="tablist" aria-label="Категории"></div>
+
+      </aside>
+      <div class="works__main">
+      <div class="cinema a-up" id="cinema">
+        <div class="cinema__stage" id="cStage">
+          <div class="cinema__bg" id="cBg"></div>
+          <div class="cinema__slides" id="cSlides"></div>
+          <button class="cinema__nav cinema__nav--prev" data-c="prev" aria-label="Предыдущее фото"><svg class="i" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button>
+          <button class="cinema__nav cinema__nav--next" data-c="next" aria-label="Следующее фото"><svg class="i" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+          <div class="cinema__meta"><span class="cinema__num"><b id="cNum">01</b> / <span id="cTotal">00</span></span><span class="cinema__cap" id="cCap"></span></div>
+          <div class="cinema__ctrl">
+            <button data-c="play" aria-label="Автопросмотр"><svg class="i i-fill i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><svg class="i i-fill i-pause" viewBox="0 0 24 24"><path d="M7 5h3v14H7zM14 5h3v14h-3z"/></svg></button>
+            <button data-c="full" aria-label="На весь экран"><svg class="i" viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+          </div>
+          <div class="cinema__progress"><i id="cProgress"></i></div>
+        </div>
+        <div class="cinema__thumbs" id="cThumbs"></div>
+      </div>
+
+      <div class="masonry" id="gallery" hidden></div>
+      <div class="more"><button class="btn btn--line" id="galleryMore" hidden>Показать ещё</button></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ЦЕНЫ -->
+  <section class="panel" id="prices" data-section="prices" aria-label="Цены">
+    <div class="wrap">
+      <header class="head">
+        <div>
+          <p class="kicker a-up"><span class="kicker__num">04</span><span>Прайс</span></p>
+          <h2 class="h2 js-split" data-bind="text.pricesTitle">Услуги и цены</h2>
+          <p class="sub a-up" data-bind="priceNote"></p>
+        </div>
+      </header>
+      <div class="chips a-up" id="priceTabs" role="tablist" aria-label="Категории услуг"></div>
+      <div class="cards a-up" id="priceGrid"></div>
+      <div class="pager-row" id="pricePager" hidden><button class="rbtn" data-pp="-1" aria-label="Назад"><svg class="i" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button><span id="pricePage">1 / 1</span><button class="rbtn" data-pp="1" aria-label="Дальше"><svg class="i" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button></div>
+    </div>
+  </section>
+
+  <!-- ОТЗЫВЫ -->
+  <section class="panel" id="reviews" data-section="reviews" aria-label="Отзывы">
+    <div class="wrap">
+      <header class="head">
+        <div>
+          <p class="kicker a-up"><span class="kicker__num">05</span><span data-bind="text.reviewsSub">Что говорят клиенты</span></p>
+          <h2 class="h2 js-split" data-bind="text.reviewsTitle">Отзывы</h2>
+        </div>
+        <div class="rv__score a-up" id="rvScore"></div>
+      </header>
+      <div class="rv a-up" id="reviewsBox">
+        <div class="rv__track" id="reviewsList"></div>
+        <div class="rv__nav"><button class="rbtn" data-rv="-1" aria-label="Назад"><svg class="i" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button><div class="rv__dots" id="rvDots"></div><button class="rbtn" data-rv="1" aria-label="Дальше"><svg class="i" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ЗАПИСЬ -->
+  <section class="panel" id="booking" data-section="booking" aria-label="Онлайн-запись">
+    <div class="wrap">
+      <header class="head">
+        <div>
+          <p class="kicker a-up"><span class="kicker__num">06</span><span>Онлайн</span></p>
+          <h2 class="h2 js-split" data-bind="text.bookingTitle">Онлайн-запись</h2>
+          <p class="sub a-up" data-bind="text.bookingSub"></p>
+        </div>
+      </header>
+      <div class="book a-up" id="book"></div>
+    </div>
+  </section>
+
+  <!-- КОНТАКТЫ -->
+  <section class="panel" id="contacts" data-section="contacts" aria-label="Контакты">
+    <div class="wrap">
+      <header class="head">
+        <div>
+          <p class="kicker a-up"><span class="kicker__num">07</span><span>Связаться</span></p>
+          <h2 class="h2 js-split" data-bind="text.contactsTitle">Контакты</h2>
+          <p class="sub a-up" data-bind="text.contactsSub"></p>
+        </div>
+      </header>
+      <div class="contacts">
+        <div class="ccard a-up" id="contactCard"></div>
+        <div class="map a-up" id="mapBox"></div>
+      </div>
+      <footer class="foot">
+        <span>© <span id="year">2026</span> <span data-bind="fullName">Александр Якунин</span><span data-bind="text.footer"></span></span>
+        <span class="foot__links"><button type="button" data-modal="privacy">Политика конфиденциальности</button><a href="#admin" id="adminLink">Вход для мастера</a></span>
+      </footer>
+    </div>
+  </section>
+</main>
+
+<!-- Нижняя навигация (телефон) -->
+<nav class="bottomnav" id="bottomNav" aria-label="Навигация"></nav>
+
+<!-- Меню «Ещё» (телефон) -->
+<div class="sheet" id="sheet" hidden>
+  <div class="sheet__bg" data-sheet-close></div>
+  <div class="sheet__card">
+    <div class="sheet__grip"></div>
+    <nav class="sheet__nav" id="sheetNav"></nav>
+    <div class="sheet__player" id="sheetPlayer" hidden>
+      <div class="player__row">
+        <button class="player__btn" data-player="prev" aria-label="Предыдущий"><svg class="i i-fill" viewBox="0 0 24 24"><path d="M18 5l-9 7 9 7zM5 5h2v14H5z"/></svg></button>
+        <button class="player__btn player__btn--main" data-player="toggle" aria-label="Играть / пауза"><svg class="i i-fill i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><svg class="i i-fill i-pause" viewBox="0 0 24 24"><path d="M7 5h3v14H7zM14 5h3v14h-3z"/></svg></button>
+        <button class="player__btn" data-player="next" aria-label="Следующий"><svg class="i i-fill" viewBox="0 0 24 24"><path d="M6 5l9 7-9 7zM17 5h2v14h-2z"/></svg></button>
+        <div class="player__info"><span class="player__label"><span class="eq"><i></i><i></i><i></i><i></i></span>Музыка</span><div class="player__title"><span data-player-title>—</span></div></div>
+      </div>
+      <ol class="playlist__list" id="sheetList"></ol>
+    </div>
+    <div class="socials js-socials"></div>
+  </div>
+</div>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр фото" hidden>
+  <button class="lightbox__close" data-lb="close" aria-label="Закрыть"><svg class="i" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  <button class="lightbox__nav lightbox__nav--prev" data-lb="prev" aria-label="Предыдущее"><svg class="i" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button>
+  <figure class="lightbox__fig"><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption></figure>
+  <button class="lightbox__nav lightbox__nav--next" data-lb="next" aria-label="Следующее"><svg class="i" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+
+<div class="modal" id="modal" hidden></div>
+<div class="toast" id="toast" role="status" hidden></div>
+<div id="adminRoot"></div>
+<audio id="audio" preload="none"></audio>
+
+<script src="js/config.js?v=15"></script>
+<script src="js/core.js?v=15"></script>
+<script src="js/app.js?v=15"></script>
+<script src="js/admin.js?v=15"></script>
+</body>
+</html>
